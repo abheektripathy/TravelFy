@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_ui_starter/models/destination_model.dart';
 
 class DestinationCarousel extends StatelessWidget {
   @override
@@ -19,16 +20,29 @@ class DestinationCarousel extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text(
-                  'See all',
-                  style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.lightBlue),
+                GestureDetector(
+                  onTap: () => print('see all'),
+                  child: Text(
+                    'See all',
+                    style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.lightBlue),
+                  ),
                 )
               ],
             ),
           ),
+          Container(
+            height: 250,
+            color: Colors.cyan,
+            child: ListView.builder(
+              itemCount: destinations.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Text(destinations[index].city);
+              },
+            ),
+          )
         ],
       ),
     );
