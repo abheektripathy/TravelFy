@@ -1,5 +1,9 @@
-# Apps From Scratch | Flutter Travel UI Starter Repo
+# Travel.FY
 
-Clone this repo and follow my YouTube video: [Flutter Travel UI Tutorial | Apps From Scratch](https://youtu.be/CSa6Ocyog4U)
+Travel.fy is FrontEnd for a tourism app created in flutter.
+ref- MarcusNg 
+In progress
 
-[Complete Travel UI](https://github.com/MarcusNg/flutter_travel_ui)
+## App Screenshots
+
+<img width="368" alt="Screen Shot 2022-07-05 at 4 16 34 PM" src="https://user-images.githubusercontent.com/90976669/177311257-e099417b-b1d0-421f-abba-a5ad90758207.png">
