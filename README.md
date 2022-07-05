@@ -2,7 +2,7 @@
 
 Travel.fy is FrontEnd for a tourism app created in flutter.
 ref- MarcusNg 
-In progress
+
 
 ## App Screenshots
 
