@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_ui_starter/models/destination_model.dart';
+
+import 'package:flutter_travel_ui_starter/models/hotel_model.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class DestinationCarousel extends StatelessWidget {
+class hotelCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,7 +16,7 @@ class DestinationCarousel extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  'Top Destinations',
+                  'Exclusive Hotels',
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
@@ -40,9 +41,9 @@ class DestinationCarousel extends StatelessWidget {
               height: 300,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: destinations.length,
+                itemCount: hotels.length,
                 itemBuilder: (BuildContext context, int index) {
-                  Destination destination = destinations[index];
+                  Hotel destination = hotels[index];
                   return Container(
                     margin: EdgeInsets.all(10.0),
                     width: 210.0,
@@ -69,13 +70,13 @@ class DestinationCarousel extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        destination.city,
+                                        destination.address,
                                         style: TextStyle(
                                             fontSize: 20.0,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       Text(
-                                        destination.description,
+                                        destination.address,
                                         style: TextStyle(fontSize: 10.0),
                                       )
                                     ]),
