@@ -70,7 +70,7 @@ class hotelCarousel extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        destination.address,
+                                        '\$${70}/night',
                                         style: TextStyle(
                                             fontSize: 20.0,
                                             fontWeight: FontWeight.bold),
