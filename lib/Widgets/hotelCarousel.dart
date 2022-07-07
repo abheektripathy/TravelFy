@@ -46,14 +46,14 @@ class hotelCarousel extends StatelessWidget {
                   Hotel destination = hotels[index];
                   return Container(
                     margin: EdgeInsets.all(10.0),
-                    width: 210.0,
+                    width: 240.0,
                     child: Stack(alignment: Alignment.topCenter, children: <
                         Widget>[
                       Positioned(
                         bottom: 15.0,
                         child: Container(
                           height: 120.0,
-                          width: 200.0,
+                          width: 240.0,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               color: Color.fromARGB(255, 255, 255, 255)),
@@ -115,7 +115,7 @@ class hotelCarousel extends StatelessWidget {
                                     ]),
                                     child: Image(
                                       height: 180.0,
-                                      width: 180.0,
+                                      width: 200.0,
                                       image: AssetImage(destination.imageUrl),
                                       fit: BoxFit.cover,
                                     ),

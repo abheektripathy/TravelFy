@@ -10,6 +10,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
+  int _currentTab = 0;
   List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
@@ -48,36 +49,55 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
-      child: ListView(
-        padding: EdgeInsets.symmetric(vertical: 30.0),
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0, right: 60.0),
-            child: Text(
-              'What would you like to find?',
-              style: TextStyle(
-                fontSize: 26.0,
-                fontWeight: FontWeight.bold,
+          child: ListView(
+            padding: EdgeInsets.symmetric(vertical: 30.0),
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0, right: 60.0),
+                child: Text(
+                  'What would you like to find?',
+                  style: TextStyle(
+                    fontSize: 26.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
-            ),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              _buildicon(0),
-              _buildicon(1),
-              _buildicon(2),
-              _buildicon(3),
+              SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _buildicon(0),
+                  _buildicon(1),
+                  _buildicon(2),
+                  _buildicon(3),
+                ],
+              ),
+              SizedBox(height: 10.0),
+              DestinationCarousel(),
+              hotelCarousel(),
             ],
           ),
-          SizedBox(height: 10.0),
-          DestinationCarousel(),
-          hotelCarousel(),
-        ],
-      ),
-    ));
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentTab,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                size: 30.0,
+              ),
+              label: SizedBox.shrink.toString(),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                size: 30.0,
+              ),
+              label: "hgvjbn",
+            )
+          ],
+        ));
   }
 }
