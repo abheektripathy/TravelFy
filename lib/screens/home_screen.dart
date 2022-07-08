@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_travel_ui_starter/Widgets/DestinationCarousel.dart';
 import 'package:flutter_travel_ui_starter/Widgets/hotelCarousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -86,16 +87,24 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.search,
-                size: 30.0,
+                size: 23.0,
               ),
-              label: SizedBox.shrink.toString(),
+              label: "search",
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.search,
-                size: 30.0,
+                Icons.panorama_fisheye_outlined,
+                size: 23.0,
               ),
-              label: "hgvjbn",
+              label: "oops",
+            ),
+            BottomNavigationBarItem(
+              icon: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    'https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg'),
+                radius: 15.0,
+              ),
+              label: "profile",
             )
           ],
         ));
